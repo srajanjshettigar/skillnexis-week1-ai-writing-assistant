@@ -3,3 +3,5 @@
 __pycache__/
 *.py[cod]
 /VIDEO DEMO/*.mp4
+.ipynb_checkpoints/
+/Mini Project 1 - AI Text Summarizer/OUTPUT/

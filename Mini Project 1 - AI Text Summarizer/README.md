@@ -1,16 +1,30 @@
-# Mini Project 1: AI Text Summarizer
+# AI Text Summarizer
 
-Open `ai_text_summarizer.ipynb` in Jupyter and run the cells from top to bottom. The interactive cell accepts pasted text and a maximum summary word count. It rejects empty input and text over 10,000 characters before sending a request.
+This notebook uses Gemini to make a short summary from text you provide. You can set a maximum word count. It checks for empty input and rejects text longer than 10,000 characters.
 
-## Setup
+## Run it on Windows
 
-From the Week 1 repository root, activate the existing virtual environment and install the notebook dependencies:
+1. Open PowerShell in the Week 1 project folder.
+2. Activate the virtual environment:
 
-```powershell
-.\.venv\Scripts\Activate.ps1
-python -m pip install -r "Mini Project 1 - AI Text Summarizer/requirements.txt"
-```
+   ```powershell
+   .\.venv\Scripts\Activate.ps1
+   ```
 
-The notebook uses the repository-root `.env` if present. Set `LLM_PROVIDER=gemini`, `GEMINI_API_KEY`, and `GEMINI_MODEL=gemini-3.5-flash-lite` there. The API key must remain private and is excluded by the root `.gitignore`. Alternatively, set `GEMINI_API_KEY` in the environment.
+3. Install the notebook packages:
 
-The notebook includes five actual Gemini summaries, factual-accuracy checks, the prompt, and a short explanation of the model. The evaluation is a small manual sample, not a guarantee of future accuracy.
+   ```powershell
+   python -m pip install -r "Mini Project 1 - AI Text Summarizer\requirements.txt"
+   ```
+
+4. Make sure the repository's `.env` file has `LLM_PROVIDER=gemini` and a valid `GEMINI_API_KEY`. Do not upload `.env` to GitHub.
+5. Open the notebook:
+
+   ```powershell
+   jupyter notebook "Mini Project 1 - AI Text Summarizer\ai_text_summarizer.ipynb"
+   ```
+
+6. If Jupyter asks, choose the Python kernel from `.venv`.
+7. Run the cells from top to bottom. In the interactive section, paste your text, choose the maximum summary length, and click **Summarize**.
+
+The notebook also shows five sample summaries with manual factual checks. They are examples, not a guarantee that every new summary will be correct.
